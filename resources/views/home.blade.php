@@ -64,7 +64,8 @@
                                         <option value="1"> الثانوي الاحرار</option>
                                         <option value="5"> الثانوي المهني</option>
                                         <option value="3"> الثانوي النظامي</option>
-                                        {{-- <option value="2">الاعدادي</option> --}}
+                                        <option value="2">الاعدادي الاحرار</option>
+                                        <option value="4">الاعدادي نظامي</option>
                                     </select>
                                 </form>
                             </div>

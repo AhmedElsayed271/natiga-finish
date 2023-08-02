@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AdadyNazamy;
 use App\Models\ReslutAdady;
 use App\Models\ResultMhany;
 use App\Models\ReslutThanwy;
 use Illuminate\Http\Request;
+use App\Models\ResultAdadayAhrar;
 use App\Models\ResultThwanayAhrar;
 use App\Models\ResultThwanwayNazamy;
 use App\Models\ResultThanwayAddadyAkradAhrary;
@@ -38,7 +40,7 @@ class NatigaConroller extends Controller
                 return view('natiga-thanway', compact('result'));
             } else if ($request->section == 2) {
                 
-                $result = ReslutAdady::where('code','=',$request->code)->first();
+                $result = ResultAdadayAhrar::where('code','=',$request->code)->first();
 
 
                 if (!$result) {
@@ -60,7 +62,7 @@ class NatigaConroller extends Controller
                 return view('natiga-thanway-arab', compact('result'));
             } else if ($request->section == 4) {
                 
-                $result = ResultThanwayAddadyAkradAhrary::where('code','=',$request->code)->first();
+                $result = AdadyNazamy::where('code','=',$request->code)->first();
 
 
                 if (!$result) {
