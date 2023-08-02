@@ -31,7 +31,7 @@
             <div class="content text-center my-5">
                 <div class="text-content">
                     <h1 class="fw-bolder">
-                        التعليم الاساسي والثانوي <span class="sp-color">2023-2024</span>
+                        التعليم الاساسي والثانوي <span class="sp-color">2023</span>
                     </h1>
                 </div>
                 @if (Session::get('error'))
@@ -65,8 +65,8 @@
                                         <option value="5"> الثانوي المهني</option>
                                         <option value="3"> الثانوي النظامي</option>
                                         <option value="6"> الثانوي النظامي عربي</option>
-                                        <option value="2">الاعدادي الاحرار</option>
-                                        <option value="4">الاعدادي نظامي</option>
+                                        {{-- <option value="2">الاعدادي الاحرار</option>
+                                        <option value="4">الاعدادي نظامي</option> --}}
                                     </select>
                                 </form>
                             </div>
