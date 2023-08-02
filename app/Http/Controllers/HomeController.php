@@ -12,6 +12,7 @@ use App\Imports\ThanwayAhrara;
 use App\Imports\ThawanwayNazamy;
 use App\Models\ResultThwanayAhrar;
 use App\Imports\AdadayAhraraNazamy;
+use App\Imports\ThanwayNazamyAraby;
 use Maatwebsite\Excel\Facades\Excel;
 
 class HomeController extends Controller
@@ -23,7 +24,7 @@ class HomeController extends Controller
 
     public function import(Request $request)
     {
-        Excel::import(new AdadayAhraraNazamy(), $request->file('file'));
+        Excel::import(new ThanwayNazamyAraby(), $request->file('file'));
     }
 
 }

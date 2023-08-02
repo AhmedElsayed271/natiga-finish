@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Models\ResultAdadayAhrar;
 use App\Models\ResultThwanayAhrar;
 use App\Models\ResultThwanwayNazamy;
+use App\Models\ResultThanwayNazamyAraby;
 use App\Models\ResultThanwayAddadyAkradAhrary;
 use App\Models\ResultThanwayAddadyArabyAhrary;
 
@@ -49,6 +50,7 @@ class NatigaConroller extends Controller
                 }
 
                 return view('natiga-adday', compact('result'));
+                
             } else if ($request->section == 3) {
                 
                 $result = ResultThwanwayNazamy::where('code','=',$request->code)->first();
@@ -60,8 +62,18 @@ class NatigaConroller extends Controller
                 }
 
                 return view('natiga-thanway-arab', compact('result'));
-            } else if ($request->section == 4) {
+            } else if ($request->section == 6) {
                 
+                $result = ResultThanwayNazamyAraby::where('code','=',$request->code)->first();
+
+
+                if (!$result) {
+
+                    return redirect()->route('home')->with(['error' => "الكود خاطئ"]);
+                }
+
+                return view('natiga-thanway-arab', compact('result'));
+            } else if ($request->section == 4) {
                 $result = AdadyNazamy::where('code','=',$request->code)->first();
 
 
