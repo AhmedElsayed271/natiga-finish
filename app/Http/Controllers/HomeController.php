@@ -2,8 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ReslutAdady;
+use App\Models\ResultMhany;
+use App\Imports\ResultMahan;
 use Illuminate\Http\Request;
-use App\Imports\ResultMahany;
+use App\Imports\Adadayahrara;
+use App\Imports\NatigaImport;
+use App\Imports\ThanwayAhrara;
+use App\Imports\ThawanwayNazamy;
+use App\Models\ResultThwanayAhrar;
+use App\Imports\AdadayAhraraNazamy;
 use Maatwebsite\Excel\Facades\Excel;
 
 class HomeController extends Controller
@@ -15,7 +23,7 @@ class HomeController extends Controller
 
     public function import(Request $request)
     {
-        Excel::import(new ResultMahany, $request->file('file'));
+        Excel::import(new AdadayAhraraNazamy(), $request->file('file'));
     }
 
 }

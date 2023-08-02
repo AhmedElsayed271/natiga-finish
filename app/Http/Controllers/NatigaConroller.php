@@ -6,6 +6,8 @@ use App\Models\ReslutAdady;
 use App\Models\ResultMhany;
 use App\Models\ReslutThanwy;
 use Illuminate\Http\Request;
+use App\Models\ResultThwanayAhrar;
+use App\Models\ResultThwanwayNazamy;
 use App\Models\ResultThanwayAddadyAkradAhrary;
 use App\Models\ResultThanwayAddadyArabyAhrary;
 
@@ -25,7 +27,7 @@ class NatigaConroller extends Controller
 
             if ($request->section == 1) {
                 
-                $result = ReslutThanwy::where('code','=',$request->code)->first();
+                $result = ResultThwanayAhrar::where('code','=',$request->code)->first();
 
 
                 if (!$result) {
@@ -47,7 +49,7 @@ class NatigaConroller extends Controller
                 return view('natiga-adday', compact('result'));
             } else if ($request->section == 3) {
                 
-                $result = ResultThanwayAddadyArabyAhrary::where('code','=',$request->code)->first();
+                $result = ResultThwanwayNazamy::where('code','=',$request->code)->first();
 
 
                 if (!$result) {
