@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html dir="rtl">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>الشهاده</title>
@@ -9,74 +10,49 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap/js/bootstrap.bundle.min.js') }}" />
     <!-- Css file -->
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/main.css') }}" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset('assets/dashboard/plugins/fontawesome-free/css/all.min.css') }}">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="{{ asset('assets/dashboard/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('assets/dashboard/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('assets/dashboard/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('assets/dashboard/dist/css/adminlte.min.css') }}">
-  </head>
-  <body>
 
 
- 
-            <!-- /.card -->
+    <style>
+        @media (max-width: 767px) {
+            label {
+                text-align: right;
+            }
+        }
+    </style>
+</head>
 
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">النتيجة</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>الاسم</th>
-                    <th>اسم الام</th>
-                    <th>النسبة المئوية</th>
-                    <th>الحالة</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>{{ $result->name }}</td>
-                    <td>{{ $result->name_of_mother }}</td>
-                    <td>{{ $result->Percent }}%</td>
-                    <td>{{ $result->Result }}</td>
-                  </tr>
-
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.card-body -->
+<body>
+    <div class="container my-5">
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label text-xs-center">الاسم</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control " readonly value="{{ $result->name }}">
             </div>
-            <!-- /.card -->
-  </body>
-  
+        </div>
+        <div class="row mb-3">
+            <label for="email" class="col-sm-2 col-form-label ">اسم الام</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" readonly value="{{ $result->name_of_mother }}">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="email" class="col-sm-2 col-form-label">النسبة المئوية</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" readonly value="{{ $result->Percent }}%">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="email" class="col-sm-2 col-form-label">الحالة</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" readonly value="{{ $result->Result }}">
+            </div>
+        </div>
+    </div>
+</body>
+
 <!-- jQuery -->
 <script src="{{ asset('assets/dashboard/plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{ asset('assets/dashboard/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<!-- DataTables  & Plugins -->
-<script src="{{ asset('assets/dashboard/plugins/datatables/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('assets/dashboard/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-<script src="{{ asset('assets/dashboard/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
-<script src="{{ asset('assets/dashboard/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
-<script src="{{ asset('assets/dashboard/plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
-<script src="{{ asset('assets/dashboard/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
-<script src="{{ asset('assets/dashboard/plugins/jszip/jszip.min.js') }}"></script>
-<script src="{{ asset('assets/dashboard/plugins/pdfmake/pdfmake.min.js') }}"></script>
-<script src="{{ asset('assets/dashboard/plugins/pdfmake/vfs_fonts.js') }}"></script>
-<script src="{{ asset('assets/dashboard/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
-<script src="{{ asset('assets/dashboard/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
-<script src="{{ asset('assets/dashboard/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset('assets/dashboard/dist/js/adminlte.min.js') }}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{ asset('assets/dashboard/dist/js/demo.js') }}"></script>
-<!-- Page specific script -->
 
 </html>

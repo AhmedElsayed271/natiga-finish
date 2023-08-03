@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap/js/bootstrap.bundle.min.js') }}" />
     <!-- Css file -->
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/main.css') }}" />
+    
 </head>
 
 <body>
